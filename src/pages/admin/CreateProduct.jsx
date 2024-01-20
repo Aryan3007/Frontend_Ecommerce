@@ -22,7 +22,7 @@ const CreateProduct = () => {
     const getAllCatagories = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:8000/api/v1/catagory/get-catagory"
+          "https://stylehub-si04.onrender.com/api/v1/catagory/get-catagory"
         );
 
         if (data?.success) {
@@ -51,7 +51,7 @@ const CreateProduct = () => {
       formData.append("photo", photo);
 
       const { data } = await axios.post(
-        "http://localhost:8000/api/v1/products/create-product",
+        "https://stylehub-si04.onrender.com/api/v1/products/create-product",
         formData
       );
 

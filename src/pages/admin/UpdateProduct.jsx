@@ -26,7 +26,7 @@ const UpdateProduct = () => {
   const getSingleproduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/api/v1/products/getSingle-product/${params.slug}`
+        `https://stylehub-si04.onrender.com/api/v1/products/getSingle-product/${params.slug}`
       );
       setName(data.product.name);
       setId(data.product._id);
@@ -48,7 +48,7 @@ const UpdateProduct = () => {
     const getAllCatagories = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:8000/api/v1/catagory/get-catagory"
+          "https://stylehub-si04.onrender.com/api/v1/catagory/get-catagory"
         );
 
         if (data?.success) {
@@ -76,7 +76,7 @@ const UpdateProduct = () => {
       photo && formData.append("photo", photo);
 
       const { data } = await axios.put(
-        `http://localhost:8000/api/v1/products/update-product/${id}`,
+        `https://stylehub-si04.onrender.com/api/v1/products/update-product/${id}`,
         formData
       );
 
@@ -100,7 +100,7 @@ const UpdateProduct = () => {
       if (!answer) return;
       // eslint-disable-next-line no-unused-vars
       const { data } =
-        await axios.delete(`http://localhost:8000/api/v1/products/delete-product/${id}`);
+        await axios.delete(`https://stylehub-si04.onrender.com/api/v1/products/delete-product/${id}`);
       toast.success("product deleted product");
       navigate("/dashboard/admin/products");
     } catch (error) {
@@ -160,7 +160,7 @@ const UpdateProduct = () => {
             <div>
               <img
                 className="h-40 w-40"
-                src={`http://localhost:8000/api/v1/products/product-photo/${id}`}
+                src={`https://stylehub-si04.onrender.com/api/v1/products/product-photo/${id}`}
                 alt=""
                 height="200px"
               />

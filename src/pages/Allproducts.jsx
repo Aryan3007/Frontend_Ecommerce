@@ -20,7 +20,7 @@ const Allproducts = () => {
   const getAllCatagory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8000/api/v1/catagory/get-catagory"
+        "https://stylehub-si04.onrender.com/api/v1/catagory/get-catagory"
       );
       if (data?.success) {
         setCatagory(data?.catagory);
@@ -38,7 +38,7 @@ const Allproducts = () => {
   const getAllProducts = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8000/api/v1/products/get-product"
+        "https://stylehub-si04.onrender.com/api/v1/products/get-product"
       );
       setProducts(data.products);
     } catch (error) {
@@ -73,7 +73,7 @@ const Allproducts = () => {
   const filteredProduct = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/api/v1/products/product-filters",
+        "https://stylehub-si04.onrender.com/api/v1/products/product-filters",
         { checked, radio }
       );
       setProducts(data?.products);
@@ -125,7 +125,7 @@ const Allproducts = () => {
             <div className="overflow-hidden">
               <img
                 className="h-[300px] w-[400px] productimg overflow-hidden bg-white"
-                src={`http://localhost:8000/api/v1/products/product-photo/${p._id}`}
+                src={`https://stylehub-si04.onrender.com/api/v1/products/product-photo/${p._id}`}
                 alt=""
               />
             </div>

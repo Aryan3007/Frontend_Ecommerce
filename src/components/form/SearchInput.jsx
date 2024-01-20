@@ -9,7 +9,7 @@ const SearchInput = () => {
   const handleSearchSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`http://localhost:8000/api/v1/products/search/${value.keyword}`);
+      const response = await axios.get(`https://stylehub-si04.onrender.com/api/v1/products/search/${value.keyword}`);
       
       // Assuming the server response contains an array of results
       const { data } = response;

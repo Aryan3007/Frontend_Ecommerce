@@ -16,7 +16,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:8000/api/v1/auth/login", {
+      const res = await axios.post("https://stylehub-si04.onrender.com/api/v1/auth/login", {
         email,
         password,
       });

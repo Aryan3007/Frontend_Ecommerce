@@ -24,7 +24,7 @@ const Search = () => {
             <div className="overflow-hidden">
               <img
                 className="h-[300px] w-[400px] productimg overflow-hidden bg-green-400"
-                src={`http://localhost:8000/api/v1/products/product-photo/${p._id}`}
+                src={`https://stylehub-si04.onrender.com/api/v1/products/product-photo/${p._id}`}
                 alt=""
               />
             </div>

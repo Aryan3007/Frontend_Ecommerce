@@ -10,7 +10,7 @@ const Products = () => {
   const getAllProduct = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8000/api/v1/products/get-product"
+        "https://stylehub-si04.onrender.com/api/v1/products/get-product"
       );
       setProducts(data.products);
     } catch (error) {
@@ -35,7 +35,7 @@ const Products = () => {
           <div  className="m-4 w-60">
             
             <div>
-                <img className="h-[300px] w-[400px] overflow-hidden bg-green-400" src={`http://localhost:8000/api/v1/products//product-photo/${p._id}`} alt="" />
+                <img className="h-[300px] w-[400px] overflow-hidden bg-green-400" src={`https://stylehub-si04.onrender.com/api/v1/products//product-photo/${p._id}`} alt="" />
             </div>
 
 

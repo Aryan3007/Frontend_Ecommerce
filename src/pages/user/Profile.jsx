@@ -31,7 +31,7 @@ const Profile = () => {
       e.preventDefault()
      
       try {
-          const {data} = await axios.put('http://localhost:8000/api/v1/auth/profile', { name, email, password, phone, address });
+          const {data} = await axios.put('https://stylehub-si04.onrender.com/api/v1/auth/profile', { name, email, password, phone, address });
          
           if (data?.success) {
             setAuth({...auth, user:data?.updatedUser})

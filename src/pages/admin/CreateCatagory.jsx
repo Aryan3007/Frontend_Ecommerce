@@ -17,7 +17,7 @@ const CreateCatagory = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/api/v1/catagory/create-catagory",
+        "https://stylehub-si04.onrender.com/api/v1/catagory/create-catagory",
         {
           name,
         }
@@ -40,7 +40,7 @@ const CreateCatagory = () => {
   const getAllCatagory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8000/api/v1/catagory/get-catagory"
+        "https://stylehub-si04.onrender.com/api/v1/catagory/get-catagory"
       );
       if (data?.success) {
         setCatagory(data?.catagory);
@@ -58,7 +58,7 @@ const CreateCatagory = () => {
   const handleupdateSubmit=async(e)=>{
     e.preventDefault();
     try {
-      const{data}=await axios.put(`http://localhost:8000/api/v1/catagory/update-catagory/${selected._id}`, {name:updatedname})
+      const{data}=await axios.put(`https://stylehub-si04.onrender.com/api/v1/catagory/update-catagory/${selected._id}`, {name:updatedname})
       if (data?.success) {
         toast.success(`${data.message} is updated`)
         setSelected(null)
@@ -76,7 +76,7 @@ const CreateCatagory = () => {
   
   const handledelete=async(pId)=>{
     try {
-      const{data}=await axios.delete(`http://localhost:8000/api/v1/catagory/delete-catagory/${pId}`, {name:updatedname})
+      const{data}=await axios.delete(`https://stylehub-si04.onrender.com/api/v1/catagory/delete-catagory/${pId}`, {name:updatedname})
       if (data?.success) {
         toast.success(`category is deleted`)
         getAllCatagory()

@@ -24,7 +24,7 @@ const ProductDetails = () => {
   const getproduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/api/v1/products/getSingle-product/${params.slug}`
+        `https://stylehub-si04.onrender.com/api/v1/products/getSingle-product/${params.slug}`
       );
       setproduct(data?.product);
       getSimilarproduct(data?.product._id, data?.product.Catagory._id);
@@ -38,7 +38,7 @@ const ProductDetails = () => {
   const getSimilarproduct = async (pid, cid) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/api/v1/products/related-product/${pid}/${cid}`
+        `https://stylehub-si04.onrender.com/api/v1/products/related-product/${pid}/${cid}`
       );
 
       setrelatedproduct(data?.products);
@@ -53,7 +53,7 @@ const ProductDetails = () => {
         <div className="h-[500px] mx-12 w-96 bg-red-400">
           <img
             className="h-full w-full productimg overflow-hidden bg-green-400"
-            src={`http://localhost:8000/api/v1/products/product-photo/${product._id}`}
+            src={`https://stylehub-si04.onrender.com/api/v1/products/product-photo/${product._id}`}
             alt=""
           />
         </div>
@@ -96,7 +96,7 @@ const ProductDetails = () => {
             <div className="overflow-hidden">
               <img
                 className="h-[300px] w-[400px] productimg overflow-hidden bg-green-400"
-                src={`http://localhost:8000/api/v1/products/product-photo/${p._id}`}
+                src={`https://stylehub-si04.onrender.com/api/v1/products/product-photo/${p._id}`}
                 alt=""
               />
             </div>
